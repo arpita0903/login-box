@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 3rd Project Work</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type=text/css href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="login">
+        <h1 style="color: #000;"><i class="fa fa-user-circle"></i> Login Here</h1>
+        <form id="myForm">
+            <p>Username</p>
+            <input type="text" name="Username" placeholder="Enter Username">
+
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            
+            <button type="submit">SUBMIT</button>
+            <a href="#">Forgot Your Password</a><br>
+            <a href="#">Create New Account Here</a>
+        </form>
+    </div>
+</body>
+<script>
+    const form=document.getElementById('myForm');
+
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        
+        const myData=new FormData(form);
+        console.log(myData)
+        const mdata=new URLSearchParams(myData);
+        
+        fetch('https://reqres.in/api/users',{
+            method: "POST",
+            body: mdata,
+        })
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+        .catch(err=>console.log(err))
+    })
+</script>
+</html>

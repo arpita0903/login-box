@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background:gray; 
+    /* background-position:center; */
+    /* background-size: cover; */
+    /* height: 100vh; */
+}
+.login{
+    width: 20%;
+    height: 370px;
+    background: #000;
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 40px 25px;
+    border-radius: 5px;
+}
+
+form{
+    margin-top: 20px;
+}
+
+h1{
+    margin: 0;
+    padding-bottom:20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login h1{
+    background-color: yellow;
+    border-radius: 6px;
+    margin: 0;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.login input,.login button{
+    width: 100%;
+    margin-bottom: 18px;
+    border-radius: 4px;
+
+}
+.login input[type="text"], input[type="password"]
+{
+    margin-top: 20px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    height: 20px;
+    font-size: 16px;
+}
+.login button{
+    border: none;
+    outline: none;
+    height: 30px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    background: yellow;
+    font-size: 17px;
+    border-radius: 10px;
+}
+.login button:hover
+{
+    cursor: pointer;
+    color: #000;
+    letter-spacing: 2px;
+    background: #fff;
+    font-weight: bold;
+
+}
+.login a{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: yellowgreen;
+
+}
+.login a:hover{
+    color: #fff;
+}
